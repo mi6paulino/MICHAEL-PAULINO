@@ -5,6 +5,45 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "args": [
+                "task"
+            ],
+            "name": "Gulp task",
+            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "args": [
+                "-u",
+                "tdd",
+                "--timeout",
+                "999999",
+                "--colors",
+                "${workspaceFolder}/test"
+            ],
+            "internalConsoleOptions": "openOnSessionStart",
+            "name": "Mocha Tests",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
             "name": "Electron Main",
             "program": "${workspaceFolder}/main.js",
             "request": "launch",
@@ -67,3 +106,5 @@ maindisplay #login #source #1987lost
 #expand #main #display #videofinder 
 #options - #opensource #i.d #main #commit 
 #mi6paulino #note #michaelpaulino #viralartist #graphicdesigner 
+#burntfurniture.weebly.com #display #main 
+#commit #electron 
